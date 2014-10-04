@@ -31,12 +31,15 @@ You add your node defenition in the nodes.js file. Decide on a unique name for y
         outputs: [false], //Integer or array indicating the outputs
         init: function (node) {
             // Function that is called when a node is created
-            // 
+            // This function should generate a canvas and add it
+            // To node.image
         },
         update: function (node, inputs, updateTime) {
             node.outputs[0] = inputs[0] && inputs[1];
         }
     };
+
+If the outputs property is a number it represents the amount of outputs and the default outputs on initialization are false. If it is an array then the amount of outputs is the length of the array and the default values on initialization will be set to whatever is in the array.
 
 Todo
 ====
