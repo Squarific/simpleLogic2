@@ -1,19 +1,28 @@
-var simpleLogic2nodes = {};
-var sl2NodeHelpers = {};
+var simpleLogic2Nodes = (function () {
 
-sl2NodeHelpers.createPortCanvas = function createPortCanvas (text) {
+	// These functions can be used to draw nodes more easily
+	// and help give them a uniform style
+	
+	var helpers = {
+		createPortCanvas: function createPortCanvas (text) {
 
-}
+		}
+	};
 
-simpleLogic2nodes.AND = {
-	name: "And Port",
-	category: "Logic Ports",
-	inputs: 2,
-	outputs: [false],
-	init: function (node) {
-		//Todo: create node.image
-	},
-	update: function (node, inputs, updateTime) {
-		node.outputs[0] = inputs[0] && inputs[1];
-	}
-};
+	var nodes = {};
+
+	nodes.AND = {
+		name: "And Port",
+		category: "Logic Ports",
+		inputs: 2,
+		outputs: [false],
+		init: function (node) {
+			//Todo: create node.image
+		},
+		update: function (node, inputs, updateTime) {
+			node.outputs[0] = inputs[0] && inputs[1];
+		}
+	};
+
+	return nodes;
+})();
