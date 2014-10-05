@@ -24,7 +24,7 @@ How to add your own node
 
 You add your node defenition in the nodes.js file. Decide on a unique name for your node then change the following js:
 
-    simpleLogic2nodes.UNIQUENAME = { //Capitalize the name
+    nodes.UNIQUENAME = { //Capitalize the name
         name: "And Port", //A human readable name (optional)
         category: "Logic Ports", //A category, used in the menu
         inputs: 2, //Integer saying how many inputs your node has, defaults to 0
@@ -40,6 +40,15 @@ You add your node defenition in the nodes.js file. Decide on a unique name for y
     };
 
 If the outputs property is a number it represents the amount of outputs and the default outputs on initialization are false. If it is an array then the amount of outputs is the length of the array and the default values on initialization will be set to whatever is in the array.
+
+There are a few helper functions that help you draw the nodes to make them look more uniform. They are within the helper object.
+
+Helper functions
+================
+
+    helper.createPortCanvas(width, height)
+
+This function returns a canvas object with the given width and height with a background and border in the style of most nodes. You shouldn't draw closer than a 10 pixel padding from the border.
 
 Todo
 ====
