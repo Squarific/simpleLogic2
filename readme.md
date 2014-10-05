@@ -13,11 +13,15 @@ SimpleLogic2 options
 	// The options object defaults to this:
     options = {
     	nodesDraggable: true,
-    	doNotRun: false
+    	doNotRun: false,
+    	tickTime: 20 //
     }
 
     var simpleLogic2Instance = new SimpleLogic2(element, options);
 
+If you want to manually run the simulation you can call simpleLogic2instance.update() or simpleLogic2instance.updateNodes(Date.now()). The first one updates to the current time with multiple ticks while the second function only runs one tick.
+
+Don't forget that if you do the simulation manually you need to call the simpleLogic2instance.draw() method yourself.
 
 How to add your own node
 ========================
