@@ -2,7 +2,6 @@ var simpleLogic2Nodes = (function () {
 
 	// These functions can be used to draw nodes more easily
 	// and help give them a uniform style
-	
 	var helpers = {
 		createPortCanvas: function createPortCanvas (text) {
 
@@ -10,6 +9,8 @@ var simpleLogic2Nodes = (function () {
 	};
 
 	var nodes = {};
+	// Put node defenitions under this line
+	// See the readme.md file for info about how they need to look
 
 	nodes.AND = {
 		name: "And Port",
